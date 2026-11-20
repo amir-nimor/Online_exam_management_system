@@ -6,6 +6,7 @@ import com.Online_exam_management_system.model.enums.Role;
 import com.Online_exam_management_system.model.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
+import org.jspecify.annotations.Nullable;
 
 @Entity
 @Table(
@@ -25,21 +26,25 @@ import lombok.*;
 @ToString
 public class User extends BaseModel<Long> {
 
+    @Column(nullable = false)
     private String username;
 
+    @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
     private String fullName;
 
+    @Column(nullable = false)
     private String phoneNumber;
 
-    @Embedded
+    @Embedded @Column(nullable = false)
     private Address address;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) @Column(nullable = false)
     private Role role;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING) @Column(nullable = false)
     private Status status;
 
 }
