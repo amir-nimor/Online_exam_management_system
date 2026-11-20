@@ -345,11 +345,11 @@ The following business rules must be enforced throughout the application:
 
 The original project specification defines the following technical requirements:
 
-| Component | Technology |
-|---|---|
-| Programming Language | Java |
-| Backend Framework | Spring |
-| Database | H2 (optional) |
+| Component | Technology               |
+|---|--------------------------|
+| Programming Language | Java                     |
+| Backend Framework | Spring                   |
+| Database | postgres                 |
 | Frontend | No specific restrictions |
 
 Additional implementation requirements:
